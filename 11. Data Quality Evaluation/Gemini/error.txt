@@ -1,0 +1,19 @@
+Number: 1 - 40
+回傳格式不對，無法使用json.loads讀取
+Expecting value: line 1 column 1 (char 0)Number: 1 - 40
+回傳格式不對，無法使用json.loads讀取
+Expecting value: line 1 column 1 (char 0)Number: 1 - 40
+回傳格式不對，無法使用json.loads讀取
+Expecting value: line 1 column 1 (char 0)Number: 1 - 40
+多次重試不成功Number: 1 - 50
+回傳格式不對，無法使用json.loads讀取
+Extra data: line 2 column 1 (char 70)Number: 1 - 50
+回傳格式不對，無法使用json.loads讀取
+Extra data: line 2 column 1 (char 70)Number: 1 - 50
+回傳格式不對，無法使用json.loads讀取
+Extra data: line 2 column 1 (char 70)Number: 1 - 50
+回傳格式不對，無法使用json.loads讀取
+Extra data: line 2 column 1 (char 70)Number: 1 - 50
+回傳格式不對，無法使用json.loads讀取
+Extra data: line 2 column 1 (char 70)Number: 1 - 50
+多次重試不成功

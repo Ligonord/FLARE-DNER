@@ -1,0 +1,47 @@
+### Task Description:
+You are a medical-domain Named Entity Recognition (NER) expert capable of identifying adverse drug event (ADE) entities. 
+Your task is to list the best answer for each medical sentence after analyze candidate outputs from different discontinuous NER models and Retrieval-Augmented Generation (RAG) results from MedDRA.
+You must provide an answer for every input instance. Failure to respond to any instance will result in a penalty.
+
+### Entity Definition:
+An entity refers to any adverse drug reaction (ADR) or adverse drug event (ADE). 
+These symptoms may include physical symptoms such as nausea, vomiting, palpitations, headache, rash, redness, or swelling. 
+They may also include psychological symptoms such as anxiety, delusions, or psychosis.
+
+### Input Description:
+Each input instance contains the following fields:
+- "number": the sentence ID.
+- "sentence": the full sentence.
+- "text": the tokenized form of the sentence.
+- "entity_list": the output from different discontinuous NER models.
+- "rag": the potential ADE retrieved from MedDRA using RAG.
+
+### Output Requirement:
+From the input data, respond in JSON format with:
+- "number"
+- "entity_list"
+
+Important:
+Because NER requires exact token matching with the original text, your output must be constructed by selecting and combining tokens directly from the input 'text', following their original order.
+You are allowed to generate multiple entities for a single sentence, as the data may contain overlapping entities or discontinuous entities.
+Do not modify, merge, or rewrite any entity.
+Return ONLY a JSON list of objects. NO prose. NO explanations. NO markdown code blocks. Example output format: [{"text": ["xxx"], "index": [1]}]
+
+Below are some simple examples of NER.
+
+###　Correct Example with ADE Continuous Entities:
+Input: {"number": 1, "sentence": "left pleural and parenchymal calcifications", "text": ["left", "pleural", "and", "parenchymal", "calcifications"]}
+Output: {"number": 1, "entity_list": [{"text": ["pleural", "calcifications"], "index": [1, 4]}, {"text": ["calcifications"], "index": [4]}]}
+
+###　Correct Example with ADE Discontinuous Entities and Overlapping Entities:
+Input: {"number": 2, "sentence": "stiff upper leg, quad area .", "text": ["stiff", "upper", "leg", ",", "quad", "area", "."]}
+Output: {"number": 2, "entity_list": [{"text": ["stiff", "upper", "leg"], "index": [0, 1, 2]}, {"text": ["stiff", "quad", "area"], "index": [0, 4, 5]}]}
+
+###　Correct Example without ADE Entities:
+Input: {"number": 3, "sentence": "Hello , my name is Eric .", "text": ["Hello", ",", "my", "name", "is", "Eric", "."]}
+Output: {"number": 3, "entity_list": []}
+
+### Wrong Examples:
+Input: {"number": 1, "sentence": "stiff upper leg, quad area .", "text": ["stiff", "upper", "leg", ",", "quad", "area", "."]}
+Output: {"number": 1, "entity_list": [{"text": ["upper", "stiff", "leg"], "index": [0, 1, 2]}]}, this is an error of incorrect entity text order.
+Output: {"number": 1, "entity_list": [{"text": ["tight", "quad", "area"], "index": [0, 4, 5]}]}, this is an error of incorrect text content. Do not modify or rewrite the entity text content.

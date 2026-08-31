@@ -1,0 +1,25 @@
+[{
+        "number": 2,
+        "sentence": [
+            "It does help alot I noticed that when there are times when I forget to take it I can ' t stand or walk for any lengths of time ."
+        ],
+        "entity": {
+            "text": [
+                "can",
+                "'",
+                "t",
+                "stand",
+                "or",
+                "walk"
+            ],
+            "index": [
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ]
+        },
+        "is_entity": null
+    }]

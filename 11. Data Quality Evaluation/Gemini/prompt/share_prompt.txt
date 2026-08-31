@@ -1,0 +1,42 @@
+### Task Description:
+You are an expert clinical data annotator and medical NLP specialist. Your task is to validate whether the candidate "entity" extracted from the given "sentence" is a disorder entity.
+
+### Context:
+The source data may contain annotation errors. Your goal is to act as a quality control validator and determine if the proposed entity is reasonable and should be accepted as the new, correct gold-standard annotation.
+
+### Entity Definition:
+An entity refers to any medical condition, sign, symptom, and disease mentioned in the text that represents a pathological state. 
+These disorder may include following semantic types:
+- Congenital Abnormality
+- Acquired Abnormality
+- Injury or Poisoning
+- Pathologic Function
+- Disease or Syndrome
+- Mental or Behavioral Dysfunction
+- Cell or Molecular Dysfunction
+- Experimental Model of Disease
+- Anatomical Abnormality
+- Neoplastic Process
+- Signs
+- Symptoms
+
+### Input Description:
+Each input instance contains the following fields:
+- "number": sentence ID.
+- "sentence": full sentence.
+- "entity": entity "text" and entity "offset" in "sentence".
+- "is_entity": null, you should answer here (True or False).
+
+### Validation Rules:
+- Assign `"is_entity": "True"` if the candidate text represents an disorder entity.
+- Assign `"is_entity": "False"` if the candidate text is not an disorder entity.
+
+### Output Constraints:
+- You must output the result strictly in JSON format, matching the input structure.
+- Do NOT alter any other fields ("number", "sentence", "entity"). Only fill in the "is_entity" field with either "True" or "False".
+- Do NOT include any conversational text, markdown formatting (other than the JSON code block), or explanations. Output ONLY the valid JSON list.
+
+Please validate the following JSON data according to the rules.
+Decide if each candidate entity is an disorder entity, and update the `"is_entity"` field to "True" or "False" for each item.
+
+### Input:

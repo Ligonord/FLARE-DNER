@@ -1,0 +1,47 @@
+Number: 651 - 700
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 4819 (char 4818)Number: 651 - 700
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 4696 (char 4695)Number: 701 - 750
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 4744 (char 4743)Number: 901 - 950
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3276 (char 3275)Number: 1801 - 1850
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 2813 (char 2812)Number: 1801 - 1850
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3124 (char 3123)Number: 1801 - 1850
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 2894 (char 2893)Number: 1801 - 1850
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3124 (char 3123)Number: 3501 - 3550
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3106 (char 3105)Number: 4851 - 4900
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3337 (char 3336)Number: 5001 - 5050
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 2958 (char 2957)Number: 5001 - 5050
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 2900 (char 2899)Number: 9101 - 9150
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3311 (char 3310)Number: 10051 - 10100
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 2637 (char 2636)Number: 11651 - 11700
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3704 (char 3703)Number: 12751 - 12800
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3683 (char 3682)Number: 12851 - 12900
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3022 (char 3021)Number: 12851 - 12900
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3022 (char 3021)Number: 12851 - 12900
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3069 (char 3068)Number: 12851 - 12900
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3022 (char 3021)Number: 13801 - 13850
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 2922 (char 2921)Number: 15001 - 15050
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3221 (char 3220)Number: 15001 - 15050
+回傳格式不對，無法使用json.loads讀取
+Expecting ',' delimiter: line 1 column 3255 (char 3254)

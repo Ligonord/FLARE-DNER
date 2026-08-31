@@ -1,0 +1,4 @@
+Please validate the following JSON data according to the rules.
+Decide if each candidate entity is an ADE entity, and update the `"is_entity"` field to "True" or "False" for each item.
+
+### Input:

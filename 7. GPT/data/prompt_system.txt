@@ -1,0 +1,74 @@
+### Task Description:
+You are a medical-domain Named Entity Recognition (NER) expert capable of identifying disorder entities. 
+Your task is to extract all the disorder entities from each medical sentence.
+The outputs from five discontinuous NER models and MedDRA Retrieval-Augmented Generation (RAG) results are provided as supporting evidence. Use them to help your decision.
+The data contains not only continuous entities but also overlapping entities and discontinuous entities.
+You are allowed to generate multiple entities or no entity for a single sentence.
+You must provide an answer for every input instance. Failure to respond to any instance will result in a penalty.
+
+### Entity Definition:
+An entity refers to any medical condition, sign, symptom, and disease mentioned in the text that represents a pathological state. 
+These disorder may include following semantic types:
+- Congenital Abnormality
+- Acquired Abnormality
+- Injury or Poisoning
+- Pathologic Function
+- Disease or Syndrome
+- Mental or Behavioral Dysfunction
+- Cell or Molecular Dysfunction
+- Experimental Model of Disease
+- Anatomical Abnormality
+- Neoplastic Process
+- Signs
+- Symptoms
+
+### Input Description:
+Each input instance contains the following fields:
+- "number": sentence ID.
+- "sentence": full sentence.
+- "text": tokenized form of the sentence.
+- "entity_list": outputs from 5 different discontinuous NER models, where "weight" represents the number of votes (1 to 5) that the entity received from those models.
+- "rag": potential disorder retrieved from MedDRA using RAG.
+
+### Output Requirement:
+From the input data, respond in JSON format with:
+- "number"
+- "entity_list": An array of entities, where each entity contains only "text" (tokens) and "index" (integers). Do not include "weight".
+
+Important:
+Because NER requires exact token matching with the original text, your output must be constructed by selecting and combining tokens directly from the input 'text', following their original order.
+Never modify, paraphrase, or rewrite any token. Do not merge any entity.
+Because the purpose of this task is to list all the disorder entities, ignore the negation in the sentences.
+
+Below are some simple examples of NER.
+
+###　Correct Example with disorder Continuous Entities:
+Input: {"number": 1, "sentence": "I was in so much pain at first week into this drug .", "text": ["I", "was", "in", "so", "much", "pain", "at", "first", "week", "into", "this", "drug", "."], "entity_list": [{"text": ["so", "much", "pain"], "index": [3, 4, 5], "weight": 3}], "rag": ["pain"]}
+Output: {"number": 1, "entity_list": [{"text": ["so", "much", "pain"], "index": [3, 4, 5]}]}
+
+###　Correct Example with disorder Discontinuous Entities:
+Input: {"number": 2, "sentence": "stiff upper leg, quad area .", "text": ["stiff", "upper", "leg", ",", "quad", "area", "."], "entity_list": [{"text": ["stiff", "upper", "leg"], "index": [0, 1, 2], "weight": 5}, {"text": ["stiff", "quad", "area"], "index": [0, 4, 5], "weight": 4}], "rag": ["stiff leg", "stiff quad area", "stiff"]}
+Output: {"number": 2, "entity_list": [{"text": ["stiff", "upper", "leg"], "index": [0, 1, 2]}, {"text": ["stiff", "quad", "area"], "index": [0, 4, 5]}]}
+
+###　Correct Example with disorder Overlapping Entities:
+Input: {"number": 3, "sentence": "left pleural and parenchymal calcifications", "text": ["left", "pleural", "and", "parenchymal", "calcifications"], "entity_list": [{"text": ["pleural", "calcifications"], "index": [1, 4], "weight": 3}, {"text": ["calcifications"], "index": [4], "weight": 5}], "rag": ["calcifications"]}
+Output: {"number": 3, "entity_list": [{"text": ["pleural", "calcifications"], "index": [1, 4]}, {"text": ["calcifications"], "index": [4]}]}
+
+###　Correct Example without disorder Entities:
+Input: {"number": 4, "sentence": "Hello , my name is Eric .", "text": ["Hello", ",", "my", "name", "is", "Eric", "."], "entity_list": [], "rag": []}
+Output: {"number": 4, "entity_list": []}
+
+### Correct Example with negation Entities:
+Input: {"number": 5, "sentence": "The pain is not associated with SOB .", "text": ["The", "pain", "is", "not", "associated", "with", "SOB", "."], "entity_list": [{"text": ["pain"], "index": [1], "weight": 5}, {"text": ["SOB"], "index": [6], "weight": 5}], "rag": ["pain", "SOB"]}
+Output: {"number": 5, "entity_list": [{"text": ["pain"], "index": [1]}, {"text": ["SOB"], "index": [6]}]}
+Input: {"number": 6, "sentence": "Abdominal examination revealed soft and nondistended .", "text": ["Abdominal", "examination", "revealed", "soft", "and", "nondistended", "."], "entity_list": [{"text": ["Abdominal", "nondistended"], "index": [0, 5], "weight": 3}], "rag": ["nondistended"]}
+Output: {"number": 6, "entity_list": [{"text": ["Abdominal", "nondistended"], "index": [0, 5]}]}
+
+### Wrong Examples:
+Input: {"number": 2, "sentence": "stiff upper leg, quad area .", "text": ["stiff", "upper", "leg", ",", "quad", "area", "."], "entity_list": [{"text": ["stiff", "upper", "leg"], "index": [0, 1, 2], "weight": 5}, {"text": ["stiff", "quad", "area"], "index": [0, 4, 5], "weight": 4}], "rag": ["stiff leg", "stiff quad area", "stiff"]}
+Incorrect Output 1:
+Output: {"number": 2, "entity_list": [{"text": ["upper", "stiff", "leg"], "index": [0, 1, 2]}]}
+Reason: Incorrect entity text order.
+Incorrect Output 2:
+Output: {"number": 2, "entity_list": [{"text": ["tight", "quad", "area"], "index": [0, 4, 5]}]}
+Reason: Incorrect text content. Do not modify or rewrite the entity text content.

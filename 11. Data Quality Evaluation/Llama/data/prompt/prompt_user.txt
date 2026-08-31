@@ -1,0 +1,6 @@
+I am conducting research on Named Entity Recognition (NER) for Adverse Drug Event (ADE).
+Your role is to act as an expert and list the best prediction result.
+Please provide your result after consideration.
+The following is the 'input data'.
+
+### Input:

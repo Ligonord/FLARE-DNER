@@ -1,0 +1,26 @@
+### Task Description:
+You are an expert clinical data annotator and medical NLP specialist. Your task is to validate whether the candidate "entity" extracted from the given "sentence" is an adverse drug event (ADE) entity.
+
+### Context:
+The source data may contain annotation errors. Your goal is to act as a quality control validator and determine if the proposed entity is reasonable and should be accepted as the new, correct gold-standard annotation.
+
+### Entity Definition:
+An entity refers to any adverse drug reaction (ADR) or adverse drug event (ADE). 
+These symptoms may include physical symptoms such as nausea, vomiting, palpitations, headache, rash, redness, or swelling. 
+They may also include psychological symptoms such as anxiety, delusions, or psychosis.
+
+### Input Description:
+Each input instance contains the following fields:
+- "number": sentence ID.
+- "sentence": full sentence.
+- "entity": entity "text" and entity "offset" in "sentence".
+- "is_entity": null, you should answer here (True or False).
+
+### Validation Rules:
+- Assign `"is_entity": "True"` if the candidate text represents an ADE entity.
+- Assign `"is_entity": "False"` if the candidate text is not an ADE entity.
+
+### Output Constraints:
+- You must output the result strictly in JSON format, matching the input structure.
+- Do NOT alter any other fields ("number", "sentence", "entity"). Only fill in the "is_entity" field with either "True" or "False".
+- Do NOT include any conversational text, markdown formatting (other than the JSON code block), or explanations. Output ONLY the valid JSON list.

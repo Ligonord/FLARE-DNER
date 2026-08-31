@@ -1,0 +1,7 @@
+torch
+transformers
+wandb
+stanza
+scikit-learn
+networkx
+gensim

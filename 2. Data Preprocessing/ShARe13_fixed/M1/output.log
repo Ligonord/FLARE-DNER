@@ -1,0 +1,42 @@
+03/23/2026 15:36:24 - INFO - __main__ -  07797-005646-DISCHARGE_SUMMARY.txt||Disease_Disorder||C0456867||554||577||580||588 is not a real discontinuous entity, as the mention (high grade large B-cell lymphoma) has no gap.
+03/23/2026 15:37:51 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 15:37:51 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 15:37:51 - INFO - __main__ -  1211,1216,1217,1221 in 04303-005081-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (chest pain) has no gap.
+03/23/2026 15:37:51 - INFO - __main__ -  1469,1472,1473,1475 in 22821-026994-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABD NT) has no gap.
+03/23/2026 15:38:28 - INFO - __main__ -  9009 sentences and 136783 tokens in ./test/text
+03/23/2026 15:39:31 - INFO - __main__ -  9758 sentences and 142159 tokens in train/text
+03/23/2026 15:44:47 - INFO - __main__ -  Find token whose original end offset is 5869 by adjusting its offset 1.
+03/23/2026 15:44:47 - INFO - __main__ -  Find token whose original end offset is 2475 by adjusting its offset 1.
+03/23/2026 15:44:47 - INFO - __main__ -  Find token whose original end offset is 605 by adjusting its offset 1.
+03/23/2026 15:44:47 - INFO - __main__ -  Find token whose original start offset is 886 by adjusting its offset 1.
+03/23/2026 15:44:47 - INFO - __main__ -  Find token whose original end offset is 178 by adjusting its offset -1.
+03/23/2026 15:44:47 - INFO - __main__ -  Convert 5821 out of 5821 annotations.
+03/23/2026 15:44:48 - INFO - __main__ -  Convert 5340 out of 5340 annotations.
+03/23/2026 16:09:41 - INFO - __main__ -  07797-005646-DISCHARGE_SUMMARY.txt||Disease_Disorder||C0456867||554||577||580||588 is not a real discontinuous entity, as the mention (high grade large B-cell lymphoma) has no gap.
+03/23/2026 16:10:33 - INFO - __main__ -  143 sentences and 2135 tokens in ./test/text
+03/23/2026 16:14:21 - INFO - __main__ -  Convert 64 out of 64 annotations.
+03/23/2026 16:30:48 - INFO - __main__ -  07797-005646-DISCHARGE_SUMMARY.txt||Disease_Disorder||C0456867||554||577||580||588 is not a real discontinuous entity, as the mention (high grade large B-cell lymphoma) has no gap.
+03/23/2026 16:30:59 - INFO - __main__ -  220 sentences and 3565 tokens in ./test/text
+03/23/2026 16:38:24 - INFO - __main__ -  Convert 120 out of 120 annotations.
+03/23/2026 16:41:41 - INFO - __main__ -  07797-005646-DISCHARGE_SUMMARY.txt||Disease_Disorder||C0456867||554||577||580||588 is not a real discontinuous entity, as the mention (high grade large B-cell lymphoma) has no gap.
+03/23/2026 16:41:52 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 16:41:52 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 16:41:52 - INFO - __main__ -  1211,1216,1217,1221 in 04303-005081-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (chest pain) has no gap.
+03/23/2026 16:41:52 - INFO - __main__ -  1469,1472,1473,1475 in 22821-026994-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABD NT) has no gap.
+03/23/2026 16:42:10 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 16:42:10 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 16:42:10 - INFO - __main__ -  1211,1216,1217,1221 in 04303-005081-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (chest pain) has no gap.
+03/23/2026 16:42:10 - INFO - __main__ -  1469,1472,1473,1475 in 22821-026994-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABD NT) has no gap.
+03/23/2026 16:42:47 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 16:42:47 - INFO - __main__ -  2453,2460,2466,2474 in 02652-006395-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABSCESS RT FLANK) has no gap.
+03/23/2026 16:42:47 - INFO - __main__ -  1211,1216,1217,1221 in 04303-005081-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (chest pain) has no gap.
+03/23/2026 16:42:47 - INFO - __main__ -  1469,1472,1473,1475 in 22821-026994-DISCHARGE_SUMMARY.txt.knowtator.xml is not a real discontinuous entity, as the mention (ABD NT) has no gap.
+03/23/2026 16:43:09 - INFO - __main__ -  9758 sentences and 142159 tokens in ./train/text
+03/23/2026 16:43:30 - INFO - __main__ -  9009 sentences and 136783 tokens in ./test/text
+03/23/2026 16:44:23 - INFO - __main__ -  Find token whose original end offset is 5869 by adjusting its offset 1.
+03/23/2026 16:44:23 - INFO - __main__ -  Find token whose original end offset is 2475 by adjusting its offset 1.
+03/23/2026 16:44:23 - INFO - __main__ -  Find token whose original end offset is 605 by adjusting its offset 1.
+03/23/2026 16:44:23 - INFO - __main__ -  Find token whose original start offset is 886 by adjusting its offset 1.
+03/23/2026 16:44:23 - INFO - __main__ -  Find token whose original end offset is 178 by adjusting its offset -1.
+03/23/2026 16:44:23 - INFO - __main__ -  Convert 5821 out of 5821 annotations.
+03/23/2026 16:44:23 - INFO - __main__ -  Convert 5340 out of 5340 annotations.

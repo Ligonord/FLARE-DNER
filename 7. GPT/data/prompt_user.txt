@@ -1,0 +1,6 @@
+I am conducting research on Named Entity Recognition (NER) for disorder.
+Your role is to act as an expert and extract all the ADE entities.
+Please provide your result after consideration.
+The following is the 'input data'.
+
+### Input:
