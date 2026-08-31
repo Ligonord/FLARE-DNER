@@ -10,6 +10,8 @@
 *   CADEC: Preprocessing for CADEC following [Dai et al](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
 *   ShARe13_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculate entity index positions for ShARe13.
 *   ShARe14_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculate entity index positions for ShARe14.
+-   [stanford-corenlp-full-2018-10-05](https://stanfordnlp.github.io/CoreNLP/history.html)
+-   [jdk-21_windows-x64_bin.exe](https://www.oracle.com/tw/java/technologies/downloads/)
 
 ### Preprocessing
 *   CADEC  
