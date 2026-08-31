@@ -8,8 +8,8 @@
 ##  2. Data Preprocessing
 ### Different preprocessing for different datasets:  
 *   CADEC: Preprocessing for CADEC following [Dai et al](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
-*   ShARe13_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculate entity index positions for ShARe13.
-*   ShARe14_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculate entity index positions for ShARe14.
+*   ShARe13_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculates entity index positions for ShARe13.
+*   ShARe14_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculates entity index positions for ShARe14.
 -   [stanford-corenlp-full-2018-10-05](https://stanfordnlp.github.io/CoreNLP/history.html)
 -   [jdk-21_windows-x64_bin.exe](https://www.oracle.com/tw/java/technologies/downloads/)
 
@@ -19,22 +19,22 @@
     2.  Run "extract_annotations.py" → "tokenization.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py" → "split_train_test.py". Please refer to "圖片說明.pptx".
     3.  In M2, put M1 output into "Input" folder and run "preprocess_2.py". Please refer to "圖片說明.pptx".
     4.  In M3, put M1 output into "Input" folder and run "preprocess_3.py".
-    5.  In M4-5, put M3 ouput into "Input" folder and run "preprocess_4-5.py".
+    5.  In M4-5, put M3 output into "Input" folder and run "preprocess_4-5.py".
 
 *   ShARe13_fixed
-    1.  In M1, unzip "Task1TrainSetCorpus199.zip" from ShARe13 and put every .txt files into "\train\text".
-    2.  Unzip "Task1TrainSetGOLD199knowtatorehost.zip" from ShARe13 and put every .xml files into "\train\ann".
-    3.  Unzip "Task1TestSetCorpus100.zip" and put every .txt files into "\test\text".
-    4.  Unzip "Task1Gold_SN2012.tar.bz2" and put every .txt files into "\test\ann".
+    1.  In M1, unzip "Task1TrainSetCorpus199.zip" from ShARe13 and put all .txt files into "\train\text".
+    2.  Unzip "Task1TrainSetGOLD199knowtatorehost.zip" from ShARe13 and put all .xml files into "\train\ann".
+    3.  Unzip "Task1TestSetCorpus100.zip" and put all .txt files into "\test\text".
+    4.  Unzip "Task1Gold_SN2012.tar.bz2" and put all .txt files into "\test\ann".
     5.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
     6.  Step 3 ~ 5 in CADEC.
 
 *   ShARe14_fixed
     1.  In M1, unzip "2014ShAReCLEFeHealthTasks2_training_10Jan2014.zip" from ShARe14.
-    2.  Put every .txt files in "2014ShAReCLEFeHealthTask2_training_corpus" into "\train\text".
-    3.  Put every .txt files in "2014ShAReCLEFeHealthTask2_training_pipedelimited.zip" into "\train\ann".
-    4.  Unzip "ShAReCLEFeHealth2014Task2_test_default_values.zip" and put every .txt files in "ShAReCLEFeHealth2104Task2_test_data_corpus" into "\test\text".
-    5.  Unzip "ShAReCLEFeHealth2014_test_data_gold.zip" from ShARe14 and put every .txt files into "\test\ann".
+    2.  Put all .txt files in "2014ShAReCLEFeHealthTask2_training_corpus" into "\train\text".
+    3.  Put all .txt files in "2014ShAReCLEFeHealthTask2_training_pipedelimited.zip" into "\train\ann".
+    4.  Unzip "ShAReCLEFeHealth2014Task2_test_default_values.zip" and put all .txt files in "ShAReCLEFeHealth2104Task2_test_data_corpus" into "\test\text".
+    5.  Unzip "ShAReCLEFeHealth2014_test_data_gold.zip" from ShARe14 and put all .txt files into "\test\ann".
     6.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
     7.  Step 3 ~ 5 in CADEC.
 
@@ -52,7 +52,7 @@
 -   [YelpBERT](https://www.aclweb.org/anthology/2020.findings-emnlp.151/)
 
 ##  4. Format Alignment
-Put five model ouputs into "input" folder and run "format_alignment.py".
+Put five model outputs into "input" folder and run "format_alignment.py".
 
 ##  5. Meta-Learner
 Put format alignment output into "input" folder and run "meta_learner.py".
@@ -106,19 +106,19 @@ Every evaluator is in this folder. "2. Data Preprocessing\\{dataset}\M3\Output\t
 1.  Put preprocessing result into "\Gemini\input".
 2.  Write prompt in "\Gemini\prompt\\{dataset}_prompt.txt" and Gemini's API key in "\Gemini\\.env".
 3.  Run "\Gemini\gemini.py".
--   P.S. The .yaml file contains the enviroment setting.
+-   P.S. The .yaml file contains the environment setting.
 
 ### Llama
 1.  Put preprocessing result into "\Llama\data\input".
 2.  Write system prompt in "\Llama\data\prompt\\{dataset}_prompt_system.txt" and user prompt in "\Llama\data\prompt\\{dataset}_prompt_user.txt".
 3.  Run "\Llama\response.py".
--   P.S. The .yaml file contains the enviroment setting.
+-   P.S. The .yaml file contains the environment setting.
 -   [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
 
 ### Post-processing
 1.  Put Gemini output into "\input\gemini" and Llama output into "\input\llama".
 2.  Run "post_processing.py".
 
-### Re-valuation
+### Re-evaluation
 1.  Put file in "\output\post" into "9. Evaluation\llm_data_evaluation".
 2.  Run "9. Evaluation\reevaluator.py".
