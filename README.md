@@ -6,37 +6,35 @@
 *   [ShARe14](https://physionet.org/content/shareclefehealth2014task2/1.0/)
 
 ##  2. Data Preprocessing
-### Different preprocessing for different datasets:  
-*   CADEC: Preprocessing for CADEC following [Dai et al](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
-*   ShARe13_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculates entity index positions for ShARe13.
-*   ShARe14_fixed: Preprocessing that merges sentences containing cross-sentence entities and recalculates entity index positions for ShARe14.
 -   [stanford-corenlp-full-2018-10-05](https://stanfordnlp.github.io/CoreNLP/history.html)
 -   [jdk-21_windows-x64_bin.exe](https://www.oracle.com/tw/java/technologies/downloads/)
 
-### Preprocessing
-*   CADEC  
-    1.  In M1, put "original" and "text" folder from CADEC into "\data\Corpora\CADEC".
-    2.  Run "extract_annotations.py" → "tokenization.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py" → "split_train_test.py". Please refer to "圖片說明.pptx".
-    3.  In M2, put M1 output into "Input" folder and run "preprocess_2.py". Please refer to "圖片說明.pptx".
-    4.  In M3, put M1 output into "Input" folder and run "preprocess_3.py".
-    5.  In M4-5, put M3 output into "Input" folder and run "preprocess_4-5.py".
+### CADEC
+-   Preprocessing for CADEC following [Dai et al](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
+1.  In M1, put "original" and "text" folder from CADEC into "\data\Corpora\CADEC".
+2.  Run "extract_annotations.py" → "tokenization.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py" → "split_train_test.py". Please refer to "圖片說明.pptx".
+3.  In M2, put M1 output into "Input" folder and run "preprocess_2.py". Please refer to "圖片說明.pptx".
+4.  In M3, put M1 output into "Input" folder and run "preprocess_3.py".
+5.  In M4-5, put M3 output into "Input" folder and run "preprocess_4-5.py".
 
-*   ShARe13_fixed
-    1.  In M1, unzip "Task1TrainSetCorpus199.zip" from ShARe13 and put all .txt files into "\train\text".
-    2.  Unzip "Task1TrainSetGOLD199knowtatorehost.zip" from ShARe13 and put all .xml files into "\train\ann".
-    3.  Unzip "Task1TestSetCorpus100.zip" and put all .txt files into "\test\text".
-    4.  Unzip "Task1Gold_SN2012.tar.bz2" and put all .txt files into "\test\ann".
-    5.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
-    6.  Step 3 ~ 5 in CADEC.
+### ShARe13_fixed
+-   Preprocessing that merges sentences containing cross-sentence entities and recalculates entity index positions for ShARe13.
+1.  In M1, unzip "Task1TrainSetCorpus199.zip" from ShARe13 and put all .txt files into "\train\text".
+2.  Unzip "Task1TrainSetGOLD199knowtatorehost.zip" from ShARe13 and put all .xml files into "\train\ann".
+3.  Unzip "Task1TestSetCorpus100.zip" and put all .txt files into "\test\text".
+4.  Unzip "Task1Gold_SN2012.tar.bz2" and put all .txt files into "\test\ann".
+5.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
+6.  Step 3 ~ 5 in CADEC.
 
-*   ShARe14_fixed
-    1.  In M1, unzip "2014ShAReCLEFeHealthTasks2_training_10Jan2014.zip" from ShARe14.
-    2.  Put all .txt files in "2014ShAReCLEFeHealthTask2_training_corpus" into "\train\text".
-    3.  Put all .txt files in "2014ShAReCLEFeHealthTask2_training_pipedelimited.zip" into "\train\ann".
-    4.  Unzip "ShAReCLEFeHealth2014Task2_test_default_values.zip" and put all .txt files in "ShAReCLEFeHealth2104Task2_test_data_corpus" into "\test\text".
-    5.  Unzip "ShAReCLEFeHealth2014_test_data_gold.zip" from ShARe14 and put all .txt files into "\test\ann".
-    6.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
-    7.  Step 3 ~ 5 in CADEC.
+### ShARe14_fixed
+-   Preprocessing that merges sentences containing cross-sentence entities and recalculates entity index positions for ShARe14.
+1.  In M1, unzip "2014ShAReCLEFeHealthTasks2_training_10Jan2014.zip" from ShARe14.
+2.  Put all .txt files in "2014ShAReCLEFeHealthTask2_training_corpus" into "\train\text".
+3.  Put all .txt files in "2014ShAReCLEFeHealthTask2_training_pipedelimited.zip" into "\train\ann".
+4.  Unzip "ShAReCLEFeHealth2014Task2_test_default_values.zip" and put all .txt files in "ShAReCLEFeHealth2104Task2_test_data_corpus" into "\test\text".
+5.  Unzip "ShAReCLEFeHealth2014_test_data_gold.zip" from ShARe14 and put all .txt files into "\test\ann".
+6.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
+7.  Step 3 ~ 5 in CADEC.
 
 ##  3. DNER Models
 *   M1: [Transition-based model](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
