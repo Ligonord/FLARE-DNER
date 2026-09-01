@@ -6,9 +6,6 @@
 *   [ShARe14](https://physionet.org/content/shareclefehealth2014task2/1.0/)
 
 ##  2. Data Preprocessing
--   [stanford-corenlp-full-2018-10-05](https://stanfordnlp.github.io/CoreNLP/history.html)
--   [jdk-21_windows-x64_bin.exe](https://www.oracle.com/tw/java/technologies/downloads/)
-
 ### CADEC
 -   Preprocessing for CADEC following [Dai et al](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
 1.  In M1, put "original" and "text" folder from CADEC into "\data\Corpora\CADEC".
@@ -35,6 +32,9 @@
 5.  Unzip "ShAReCLEFeHealth2014_test_data_gold.zip" from ShARe14 and put all .txt files into "\test\ann".
 6.  Run "extract_annotations.py" → "tokenization.py" → "data_fixed.py" → "convert_ann_using_token_idx.py" → "convert_text_inline.py".
 7.  Step 3 ~ 5 in CADEC.
+
+-   [stanford-corenlp-full-2018-10-05](https://stanfordnlp.github.io/CoreNLP/history.html)
+-   [jdk-21_windows-x64_bin.exe](https://www.oracle.com/tw/java/technologies/downloads/)
 
 ##  3. DNER Models
 *   M1: [Transition-based model](https://github.com/dainlp/acl2020-transition-discontinuous-ner).
